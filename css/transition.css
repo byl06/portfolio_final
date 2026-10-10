@@ -1,12 +1,13 @@
 /* =========================================================
    TRANSITION SIGNATURE — BylDesign
-   À inclure dans toutes les pages qui utilisent la transition
    ========================================================= */
 
 .transition-overlay {
+  --trans-duration: 700ms; /* valeur par défaut (le JS la remplace) */
+
   position: fixed;
   inset: 0;
-  z-index: 9999;
+  z-index: 99999;
   pointer-events: none;
   visibility: hidden;
   background: #0a0a0a;
@@ -16,11 +17,12 @@
 .transition-overlay.active {
   visibility: visible;
   pointer-events: all;
-  animation: transFade .2s ease forwards;
+  animation: transFade .15s ease forwards;
 }
 
 @keyframes transFade { to { opacity: 1; } }
 
+/* --- SIGNATURE --- */
 .transition-signature {
   position: absolute;
   inset: 0;
@@ -37,7 +39,7 @@
 }
 
 .transition-overlay.active .transition-signature {
-  animation: transWrite 1.4s cubic-bezier(.6, 0, .4, 1) forwards;
+  animation: transWrite var(--trans-duration) cubic-bezier(.6, 0, .4, 1) forwards;
 }
 
 @keyframes transWrite {
@@ -45,6 +47,7 @@
   100% { clip-path: inset(0 0 0 0); }
 }
 
+/* --- TRAIT DE PLUME --- */
 .transition-pen {
   position: absolute;
   top: 50%;
@@ -59,74 +62,7 @@
 }
 
 .transition-overlay.active .transition-pen {
-  animation: transPen 1.4s cubic-bezier(.6, 0, .4, 1) forwards;
-}
-
-@keyframes transPen {
-  0%   { opacity: 1; left: 20%; }
-  100% { opacity: 0; left: 82%; }
-}/* =========================================================
-   TRANSITION SIGNATURE — BylDesign
-   À inclure dans toutes les pages qui utilisent la transition
-   ========================================================= */
-
-.transition-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: none;
-  visibility: hidden;
-  background: #0a0a0a;
-  opacity: 0;
-}
-
-.transition-overlay.active {
-  visibility: visible;
-  pointer-events: all;
-  animation: transFade .2s ease forwards;
-}
-
-@keyframes transFade { to { opacity: 1; } }
-
-.transition-signature {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Alex Brush', cursive;
-  font-size: clamp(80px, 14vw, 220px);
-  color: #fff;
-  text-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
-  z-index: 10;
-  clip-path: inset(0 100% 0 0);
-  line-height: 1;
-}
-
-.transition-overlay.active .transition-signature {
-  animation: transWrite 1.4s cubic-bezier(.6, 0, .4, 1) forwards;
-}
-
-@keyframes transWrite {
-  0%   { clip-path: inset(0 100% 0 0); }
-  100% { clip-path: inset(0 0 0 0); }
-}
-
-.transition-pen {
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  width: 3px;
-  height: 60px;
-  background: #fe6e00;
-  transform: translateY(-50%);
-  box-shadow: 0 0 20px #fe6e00;
-  opacity: 0;
-  z-index: 11;
-}
-
-.transition-overlay.active .transition-pen {
-  animation: transPen 1.4s cubic-bezier(.6, 0, .4, 1) forwards;
+  animation: transPen var(--trans-duration) cubic-bezier(.6, 0, .4, 1) forwards;
 }
 
 @keyframes transPen {
