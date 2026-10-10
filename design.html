@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphisme & Design — BylDesign</title>
+<meta name="description" content="Projets de design graphique par BylDesign : logos, flyers, identités visuelles, branding et motion design.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=Alex+Brush&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/transition.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/secteur.css">
+</head>
+<body class="page-secteur" data-secteur="design">
+
+<!-- ============ NAV ============ -->
+<header class="nav nav-static">
+  <a href="index.html" data-transition class="nav-logo">BylDesign</a>
+  <nav class="nav-right">
+    <a href="index.html" data-transition>Accueil</a>
+    <a href="projets.html" data-transition class="is-active">Projets</a>
+    <a href="index.html#contact" data-transition>Contact</a>
+  </nav>
+</header>
+
+<!-- ============ HERO SECTEUR ============ -->
+<section class="secteur-hero">
+  <div class="secteur-hero-inner">
+
+    <div class="secteur-hero-left">
+      <a href="projets.html" data-transition class="back-link">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M11 18l-6-6 6-6"/>
+        </svg>
+        Retour aux volumes
+      </a>
+
+      <div class="secteur-hero-cat" data-reveal="up">Volume 01</div>
+      <h1 class="secteur-hero-title" data-reveal="big-up" data-delay="1">
+        Graphisme<br>
+        <span class="accent">& Design</span>
+      </h1>
+      <p class="secteur-hero-intro" data-reveal="up" data-delay="2">
+        Identités visuelles, logos, flyers et branding — chaque projet
+        est pensé comme une signature. Mon approche : comprendre la marque
+        avant de la dessiner.
+      </p>
+    </div>
+
+    <div class="secteur-hero-right">
+      <div class="secteur-big-num" aria-hidden="true">01</div>
+    </div>
+
+  </div>
+
+  <div class="secteur-meta">
+    <div class="secteur-meta-item" data-reveal="up">
+      <span class="meta-label">Projets</span>
+      <span class="meta-value">12+</span>
+    </div>
+    <div class="secteur-meta-item" data-reveal="up" data-delay="1">
+      <span class="meta-label">Années</span>
+      <span class="meta-value">2023 — 2026</span>
+    </div>
+    <div class="secteur-meta-item" data-reveal="up" data-delay="2">
+      <span class="meta-label">Outils</span>
+      <span class="meta-value">Photoshop · Illustrator · Figma</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIE ============ -->
+<section class="secteur-galerie">
+
+  <div class="secteur-filtres" role="tablist" data-reveal="up">
+    <button class="sfiltre active" data-sub="all" role="tab">Tout</button>
+    <button class="sfiltre" data-sub="logo" role="tab">Logos</button>
+    <button class="sfiltre" data-sub="flyer" role="tab">Flyers</button>
+    <button class="sfiltre" data-sub="identite" role="tab">Identité visuelle</button>
+    <button class="sfiltre" data-sub="marque" role="tab">Marque</button>
+  </div>
+
+  <div class="secteur-grid">
+
+    <!-- PROJET 1 — Ani Délices (identité + motion) -->
+    <article class="proj-card" data-sub="identite" data-reveal="up" data-delay="1">
+      <div class="proj-img">
+        <img src="assets/projets/design/burger.png" alt="Ani Délices" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=Ani+Delices'">
+        <span class="proj-cat">Identité visuelle</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Ani Délices</h3>
+          <span class="proj-year">2025</span>
+        </div>
+        <p class="proj-type">Restaurant — Identité & motion design</p>
+        <p class="proj-desc">
+          Création complète de l'identité visuelle pour un restaurant :
+          logo, palette, typographie, supports print et motion design
+          publicitaire pour les réseaux sociaux.
+        </p>
+        <a href="https://www.behance.net/byl-gaibachiro" class="proj-link" target="_blank" rel="noopener">
+          Voir sur Behance
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 2 — Seven Marque -->
+    <article class="proj-card" data-sub="marque" data-reveal="up" data-delay="2">
+      <div class="proj-img">
+        <img src="assets/projets/design/Seven.png" alt="Seven Marque" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=Seven'">
+        <span class="proj-cat">Marque</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Seven — Marque</h3>
+          <span class="proj-year">2025</span>
+        </div>
+        <p class="proj-type">Branding — Marque mode</p>
+        <p class="proj-desc">
+          Conception complète de l'identité de marque Seven : logo,
+          charte graphique, supports print et déclinaisons digitales
+          pour une marque de mode moderne.
+        </p>
+        <a href="https://www.behance.net/byl-gaibachiro" class="proj-link" target="_blank" rel="noopener">
+          Voir sur Behance
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 3 — Flyer Anniversaire Sharon -->
+    <article class="proj-card" data-sub="flyer" data-reveal="up" data-delay="3">
+      <div class="proj-img">
+        <img src="assets/projets/design/Sharon.png" alt="Flyer Anniversaire" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=Flyer'">
+        <span class="proj-cat">Flyer</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Flyer Anniversaire</h3>
+          <span class="proj-year">2024</span>
+        </div>
+        <p class="proj-type">Flyer — Événement personnel</p>
+        <p class="proj-desc">
+          Création de flyers événementiels personnalisés, avec une
+          direction artistique élégante et moderne. Format print et digital.
+        </p>
+        <a href="https://www.behance.net/byl-gaibachiro" class="proj-link" target="_blank" rel="noopener">
+          Voir sur Behance
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 4 — MRIC Produits esthétiques -->
+    <article class="proj-card" data-sub="identite" data-reveal="up" data-delay="1">
+      <div class="proj-img">
+        <img src="assets/projets/design/MRIC-1.png" alt="MRIC" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=MRIC'">
+        <span class="proj-cat">Identité visuelle</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">MRIC</h3>
+          <span class="proj-year">2025</span>
+        </div>
+        <p class="proj-type">Identité — Produits esthétiques</p>
+        <p class="proj-desc">
+          Création de l'identité visuelle d'une gamme de produits
+          esthétiques : logo, packaging, supports de communication
+          et direction artistique.
+        </p>
+        <a href="https://www.behance.net/byl-gaibachiro" class="proj-link" target="_blank" rel="noopener">
+          Voir sur Behance
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 5 — CIVO Montre -->
+    <article class="proj-card" data-sub="marque" data-reveal="up" data-delay="2">
+      <div class="proj-img">
+        <img src="assets/projets/design/Watch.png" alt="CIVO Montre" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=Watch'">
+        <span class="proj-cat">Marque</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">CIVO — Montre</h3>
+          <span class="proj-year">2024</span>
+        </div>
+        <p class="proj-type">Visuel — Marque de montres</p>
+        <p class="proj-desc">
+          Création de visuels publicitaires haut de gamme pour une marque
+          de montres. Retouche produit, mise en scène et direction artistique.
+        </p>
+        <a href="https://www.behance.net/byl-gaibachiro" class="proj-link" target="_blank" rel="noopener">
+          Voir sur Behance
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 6 — Barber Flyer -->
+    <article class="proj-card" data-sub="flyer" data-reveal="up" data-delay="3">
+      <div class="proj-img">
+        <img src="assets/projets/design/hair1.png" alt="Barber Flyer" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=Barber'">
+        <span class="proj-cat">Flyer</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Barber — Flyer</h3>
+          <span class="proj-year">2024</span>
+        </div>
+        <p class="proj-type">Flyer — Salon de coiffure</p>
+        <p class="proj-desc">
+          Design de flyers promotionnels pour un salon de coiffure.
+          Style urbain, typographie forte et mise en avant des services.
+        </p>
+        <a href="https://www.behance.net/byl-gaibachiro" class="proj-link" target="_blank" rel="noopener">
+          Voir sur Behance
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 7 — Visuel Château Margaux -->
+    <article class="proj-card" data-sub="marque" data-reveal="up" data-delay="1">
+      <div class="proj-img">
+        <img src="assets/projets/design/margaux.png" alt="Château Margaux" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=Margaux'">
+        <span class="proj-cat">Marque</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Château Margaux</h3>
+          <span class="proj-year">2025</span>
+        </div>
+        <p class="proj-type">Publicité — Maison de vin</p>
+        <p class="proj-desc">
+          Création d'un visuel publicitaire premium pour une marque de vin
+          prestigieuse. Composition élégante et direction artistique haut de gamme.
+        </p>
+        <a href="https://www.behance.net/byl-gaibachiro" class="proj-link" target="_blank" rel="noopener">
+          Voir sur Behance
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 8 — Beat UI/UX -->
+    <article class="proj-card" data-sub="identite" data-reveal="up" data-delay="2">
+      <div class="proj-img">
+        <img src="assets/projets/design/beat.png" alt="Beat App Design" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=UI+UX'">
+        <span class="proj-cat">Identité visuelle</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Beat — UI Design</h3>
+          <span class="proj-year">2025</span>
+        </div>
+        <p class="proj-type">UI / UX — Application musicale</p>
+        <p class="proj-desc">
+          Conception d'interfaces pour une application musicale. Design system,
+          wireframes, prototypes interactifs et déclinaisons mobiles.
+        </p>
+        <a href="https://www.behance.net/byl-gaibachiro" class="proj-link" target="_blank" rel="noopener">
+          Voir sur Behance
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 9 — Dashboard Analytics -->
+    <article class="proj-card" data-sub="identite" data-reveal="up" data-delay="3">
+      <div class="proj-img">
+        <img src="assets/projets/design/ooo.png" alt="Dashboard Analytics" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=Dashboard'">
+        <span class="proj-cat">Identité visuelle</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Dashboard Analytics</h3>
+          <span class="proj-year">2024</span>
+        </div>
+        <p class="proj-type">UI — Interface de données</p>
+        <p class="proj-desc">
+          Design d'un dashboard analytique moderne. Hiérarchisation de la
+          donnée, visualisations claires et expérience utilisateur optimisée.
+        </p>
+        <a href="https://www.behance.net/byl-gaibachiro" class="proj-link" target="_blank" rel="noopener">
+          Voir sur Behance
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 10 — Lion Fort -->
+    <article class="proj-card" data-sub="marque" data-reveal="up" data-delay="1">
+      <div class="proj-img">
+        <img src="assets/projets/design/lionfort.png" alt="Lion Fort" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=Lion+Fort'">
+        <span class="proj-cat">Marque</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Lion Fort</h3>
+          <span class="proj-year">2024</span>
+        </div>
+        <p class="proj-type">Identité — Marque énergique</p>
+        <p class="proj-desc">
+          Conception d'une identité de marque forte et impactante.
+          Univers graphique affirmé, symbole puissant et déclinaisons.
+        </p>
+        <a href="https://www.behance.net/byl-gaibachiro" class="proj-link" target="_blank" rel="noopener">
+          Voir sur Behance
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 11 — E-commerce Luxe -->
+    <article class="proj-card" data-sub="identite" data-reveal="up" data-delay="2">
+      <div class="proj-img">
+        <img src="assets/projets/design/couture.png" alt="Couture Luxe" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=Couture'">
+        <span class="proj-cat">Identité visuelle</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">E-commerce Couture</h3>
+          <span class="proj-year">2025</span>
+        </div>
+        <p class="proj-type">Design — Boutique en ligne</p>
+        <p class="proj-desc">
+          Direction artistique pour une boutique en ligne de haute couture.
+          Univers élégant, mise en scène produit et expérience immersive.
+        </p>
+        <a href="https://www.behance.net/byl-gaibachiro" class="proj-link" target="_blank" rel="noopener">
+          Voir sur Behance
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 12 — Dashboard Studio -->
+    <article class="proj-card" data-sub="identite" data-reveal="up" data-delay="3">
+      <div class="proj-img">
+        <img src="assets/projets/design/ev.png" alt="Studio Dashboard" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=Studio'">
+        <span class="proj-cat">Identité visuelle</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Studio Dashboard</h3>
+          <span class="proj-year">2024</span>
+        </div>
+        <p class="proj-type">UI Design — Interface créative</p>
+        <p class="proj-desc">
+          Refonte d'une interface de gestion pour studio créatif. Design
+          épuré, expérience fluide et identité visuelle cohérente.
+        </p>
+        <a href="https://www.behance.net/byl-gaibachiro" class="proj-link" target="_blank" rel="noopener">
+          Voir sur Behance
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="secteur-empty" hidden>
+    Aucun projet dans cette catégorie pour le moment.
+  </div>
+
+</section>
+
+<!-- ============ RETOUR VOLUMES ============ -->
+<section class="secteur-retour">
+  <a href="projets.html" data-transition class="retour-btn">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M11 18l-6-6 6-6"/>
+    </svg>
+    Retour aux volumes
+  </a>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" data-reveal="fade">
+  <p>© 2026 BylDesign — Tous droits réservés</p>
+</footer>
+
+<!-- Transition Signature -->
+<div class="transition-overlay">
+  <div class="transition-pen"></div>
+  <div class="transition-signature">BylDesign</div>
+</div>
+
+<script src="js/transition.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/secteur.js"></script>
+</body>
+</html>

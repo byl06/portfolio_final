@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Montage Vidéo — BylDesign</title>
+<meta name="description" content="Projets de montage vidéo par BylDesign : motion design, publicités et contenus courts.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=Alex+Brush&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/transition.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/secteur.css">
+</head>
+<body class="page-secteur" data-secteur="montage">
+
+<!-- ============ NAV ============ -->
+<header class="nav nav-static">
+  <a href="index.html" data-transition class="nav-logo">BylDesign</a>
+  <nav class="nav-right">
+    <a href="index.html" data-transition>Accueil</a>
+    <a href="projets.html" data-transition class="is-active">Projets</a>
+    <a href="index.html#contact" data-transition>Contact</a>
+  </nav>
+</header>
+
+<!-- ============ HERO SECTEUR ============ -->
+<section class="secteur-hero">
+  <div class="secteur-hero-inner">
+    <div class="secteur-hero-left">
+      <a href="projets.html" data-transition class="back-link">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M11 18l-6-6 6-6"/>
+        </svg>
+        Retour aux volumes
+      </a>
+
+      <div class="secteur-hero-cat" data-reveal="up">Volume 03</div>
+      <h1 class="secteur-hero-title" data-reveal="big-up" data-delay="1">
+        Montage<br>
+        <span class="accent">Vidéo.</span>
+      </h1>
+      <p class="secteur-hero-intro" data-reveal="up" data-delay="2">
+        Motion design, spots publicitaires et contenus courts — je transforme
+        les images en récits. Rythme, transitions, sound design :
+        tout est pensé pour capter l'attention.
+      </p>
+    </div>
+
+    <div class="secteur-hero-right">
+      <div class="secteur-big-num" aria-hidden="true">03</div>
+    </div>
+  </div>
+
+  <div class="secteur-meta">
+    <div class="secteur-meta-item" data-reveal="up">
+      <span class="meta-label">Projets</span>
+      <span class="meta-value">04</span>
+    </div>
+    <div class="secteur-meta-item" data-reveal="up" data-delay="1">
+      <span class="meta-label">Années</span>
+      <span class="meta-value">2024 — 2026</span>
+    </div>
+    <div class="secteur-meta-item" data-reveal="up" data-delay="2">
+      <span class="meta-label">Outils</span>
+      <span class="meta-value">CapCut · DaVinci Resolve · Filmora</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIE VIDÉOS ============ -->
+<section class="secteur-galerie">
+
+  <div class="secteur-filtres" role="tablist" data-reveal="up">
+    <button class="sfiltre active" data-sub="all" role="tab">Tout</button>
+    <button class="sfiltre" data-sub="pub" role="tab">Publicités</button>
+    <button class="sfiltre" data-sub="motion" role="tab">Motion design</button>
+  </div>
+
+  <div class="secteur-grid">
+
+    <!-- PROJET 1 — Château Margaux -->
+    <article class="proj-card" data-sub="pub" data-reveal="up" data-delay="1">
+      <div class="proj-video-embed">
+        <video 
+          src="https://res.cloudinary.com/y8rdyvtk/video/upload/v1791649222/margauxd_t0rad1.mp4" 
+          muted loop playsinline preload="metadata"
+          controls
+          onerror="this.parentElement.innerHTML='<div class=\'video-placeholder\'>🎬 Vidéo indisponible</div>'">
+        </video>
+        <span class="proj-cat">Publicité</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Château Margaux</h3>
+          <span class="proj-year">2025</span>
+        </div>
+        <p class="proj-type">Publicité — Maison de vin</p>
+        <p class="proj-desc">
+          Spot publicitaire cinématographique pour une maison de vin prestigieuse.
+          Étalonnage haut de gamme, rythme élégant et sound design soigné.
+        </p>
+      </div>
+    </article>
+
+    <!-- PROJET 2 — Waaz Agency -->
+    <article class="proj-card" data-sub="motion" data-reveal="up" data-delay="2">
+      <div class="proj-video-embed">
+        <video 
+          src="https://res.cloudinary.com/y8rdyvtk/video/upload/v1791649100/Waazagency_xmz37g.mp4" 
+          muted loop playsinline preload="metadata"
+          controls
+          onerror="this.parentElement.innerHTML='<div class=\'video-placeholder\'>🎬 Vidéo indisponible</div>'">
+        </video>
+        <span class="proj-cat">Motion design</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Waaz Agency</h3>
+          <span class="proj-year">2024</span>
+        </div>
+        <p class="proj-type">Motion design — Agence créative</p>
+        <p class="proj-desc">
+          Motion design et habillage graphique pour une agence créative.
+          Typographies animées, transitions rythmées et identité visuelle forte.
+        </p>
+      </div>
+    </article>
+
+    <!-- PROJET 3 — Ani Délices -->
+    <article class="proj-card" data-sub="pub" data-reveal="up" data-delay="3">
+      <div class="proj-video-embed">
+        <video 
+          src="https://res.cloudinary.com/y8rdyvtk/video/upload/v1791649340/gateaux_z06soq.mp4" 
+          muted loop playsinline preload="metadata"
+          controls
+          onerror="this.parentElement.innerHTML='<div class=\'video-placeholder\'>🎬 Vidéo indisponible</div>'">
+        </video>
+        <span class="proj-cat">Publicité</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Ani Délices</h3>
+          <span class="proj-year">2025</span>
+        </div>
+        <p class="proj-type">Publicité — Pâtisserie & restaurant</p>
+        <p class="proj-desc">
+          Publicité en motion design pour une pâtisserie. Mise en scène
+          gourmande, mouvements de caméra immersifs et univers visuel
+          conçu pour stimuler l'appétit.
+        </p>
+      </div>
+    </article>
+
+    <!-- PROJET 4 — IKOKO Restaurant -->
+    <article class="proj-card" data-sub="pub" data-reveal="up" data-delay="1">
+      <div class="proj-video-embed">
+        <video 
+          src="https://res.cloudinary.com/y8rdyvtk/video/upload/v1791649479/Vid%C3%A9o_sans_titre_6_hsnkor.mp4" 
+          muted loop playsinline preload="metadata"
+          controls
+          onerror="this.parentElement.innerHTML='<div class=\'video-placeholder\'>🎬 Vidéo indisponible</div>'">
+        </video>
+        <span class="proj-cat">Publicité</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">IKOKO Restaurant</h3>
+          <span class="proj-year">2026</span>
+        </div>
+        <p class="proj-type">Publicité — Restaurant</p>
+        <p class="proj-desc">
+          Spot publicitaire pour un restaurant. Ambiance chaleureuse,
+          mise en avant des plats signature et rythme dynamique pour
+          les réseaux sociaux.
+        </p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="secteur-empty" hidden>
+    Aucun projet dans cette catégorie pour le moment.
+  </div>
+
+</section>
+
+<!-- ============ RETOUR VOLUMES ============ -->
+<section class="secteur-retour">
+  <a href="projets.html" data-transition class="retour-btn">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M11 18l-6-6 6-6"/>
+    </svg>
+    Retour aux volumes
+  </a>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" data-reveal="fade">
+  <p>© 2026 BylDesign — Tous droits réservés</p>
+</footer>
+
+<!-- Transition Signature -->
+<div class="transition-overlay">
+  <div class="transition-pen"></div>
+  <div class="transition-signature">BylDesign</div>
+</div>
+
+<script src="js/transition.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/secteur.js"></script>
+<script src="js/videos.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Développement Web — BylDesign</title>
+<meta name="description" content="Projets de développement web par BylDesign : sites vitrines, applications web, e-commerce et UI/UX.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=Alex+Brush&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/transition.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/secteur.css">
+</head>
+<body class="page-secteur" data-secteur="dev">
+
+<!-- ============ NAV ============ -->
+<header class="nav nav-static">
+  <a href="index.html" data-transition class="nav-logo">BylDesign</a>
+  <nav class="nav-right">
+    <a href="index.html" data-transition>Accueil</a>
+    <a href="projets.html" data-transition class="is-active">Projets</a>
+    <a href="index.html#contact" data-transition>Contact</a>
+  </nav>
+</header>
+
+<!-- ============ HERO SECTEUR ============ -->
+<section class="secteur-hero">
+  <div class="secteur-hero-inner">
+
+    <div class="secteur-hero-left">
+      <a href="projets.html" data-transition class="back-link">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M11 18l-6-6 6-6"/>
+        </svg>
+        Retour aux volumes
+      </a>
+
+      <div class="secteur-hero-cat" data-reveal="up">Volume 02</div>
+      <h1 class="secteur-hero-title" data-reveal="big-up" data-delay="1">
+        Développement<br>
+        <span class="accent">Web.</span>
+      </h1>
+      <p class="secteur-hero-intro" data-reveal="up" data-delay="2">
+        Sites vitrines, applications web et e-commerce — du design
+        à la mise en production. Mon objectif : des interfaces rapides,
+        responsives et pensées pour l'utilisateur.
+      </p>
+    </div>
+
+    <div class="secteur-hero-right">
+      <div class="secteur-big-num" aria-hidden="true">02</div>
+    </div>
+
+  </div>
+
+  <div class="secteur-meta">
+    <div class="secteur-meta-item" data-reveal="up">
+      <span class="meta-label">Projets</span>
+      <span class="meta-value">08+</span>
+    </div>
+    <div class="secteur-meta-item" data-reveal="up" data-delay="1">
+      <span class="meta-label">Années</span>
+      <span class="meta-value">2023 — 2026</span>
+    </div>
+    <div class="secteur-meta-item" data-reveal="up" data-delay="2">
+      <span class="meta-label">Outils</span>
+      <span class="meta-value">HTML · CSS · JS · React · Node.js</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIE ============ -->
+<section class="secteur-galerie">
+
+  <div class="secteur-filtres" role="tablist" data-reveal="up">
+    <button class="sfiltre active" data-sub="all" role="tab">Tout</button>
+    <button class="sfiltre" data-sub="site" role="tab">Sites vitrines</button>
+    <button class="sfiltre" data-sub="appweb" role="tab">Applications web</button>
+    <button class="sfiltre" data-sub="ecommerce" role="tab">E-commerce</button>
+    <button class="sfiltre" data-sub="uiux" role="tab">UI / UX</button>
+  </div>
+
+  <div class="secteur-grid">
+
+    <!-- PROJET 1 — BTP Devis Pro -->
+    <article class="proj-card" data-sub="appweb" data-reveal="up" data-delay="1">
+      <div class="proj-img">
+        <img src="assets/projets/dev/d.png" alt="BTP Devis Pro" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=BTP+Devis+Pro'">
+        <span class="proj-cat">Application web</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">BTP Devis Pro</h3>
+          <span class="proj-year">2025</span>
+        </div>
+        <p class="proj-type">Full-stack — Gestion de devis BTP</p>
+        <p class="proj-desc">
+          Application web complète de gestion et génération automatique de devis
+          pour le secteur du BTP. Dashboard analytique, gestion clients et
+          système de facturation.
+        </p>
+        <a href="https://btp-devis-pro-1.onrender.com/" target="_blank" rel="noopener" class="proj-link">
+          Voir le site
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 2 — Valois Estates -->
+    <article class="proj-card" data-sub="site" data-reveal="up" data-delay="2">
+      <div class="proj-img">
+        <img src="assets/projets/dev/valois_hero.png" alt="Valois Estates" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=Valois'">
+        <span class="proj-cat">Site vitrine</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Valois Estates</h3>
+          <span class="proj-year">2024</span>
+        </div>
+        <p class="proj-type">Site web — Immobilier</p>
+        <p class="proj-desc">
+          Site vitrine moderne pour une agence immobilière haut de gamme.
+          Design épuré, navigation fluide et mise en avant des biens
+          avec animations élégantes.
+        </p>
+        <a href="https://valois-estates-horizon.netlify.app/" target="_blank" rel="noopener" class="proj-link">
+          Voir le site
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 3 — Eclat Parfum -->
+    <article class="proj-card" data-sub="ecommerce" data-reveal="up" data-delay="3">
+      <div class="proj-img">
+        <img src="assets/projets/dev/nuit_ambre.png" alt="Eclat Parfum" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=Eclat'">
+        <span class="proj-cat">E-commerce</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Eclat Parfum</h3>
+          <span class="proj-year">2024</span>
+        </div>
+        <p class="proj-type">E-commerce — Parfumerie</p>
+        <p class="proj-desc">
+          Plateforme e-commerce haut de gamme pour une marque de parfums.
+          Expérience d'achat immersive, fiches produits élégantes et
+          tunnel de conversion optimisé.
+        </p>
+        <a href="https://eclat-parfumshop.netlify.app/" target="_blank" rel="noopener" class="proj-link">
+          Voir le site
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 4 — Elite Fitness -->
+    <article class="proj-card" data-sub="site" data-reveal="up" data-delay="1">
+      <div class="proj-img">
+        <img src="assets/projets/dev/elite-fitness.jpg" alt="Elite Fitness" loading="lazy" onerror="this.src='https://placehold.co/600x600/ededeb/8a8a8a?text=Fitness'">
+        <span class="proj-cat">Site vitrine</span>
+      </div>
+      <div class="proj-info">
+        <div class="proj-head">
+          <h3 class="proj-title">Elite Fitness</h3>
+          <span class="proj-year">2024</span>
+        </div>
+        <p class="proj-type">Site web — Salle de sport</p>
+        <p class="proj-desc">
+          Landing page dynamique et identité de marque complète pour une
+          salle de sport. Design impactant, animations fluides et
+          optimisation de la conversion.
+        </p>
+        <a href="https://elite-fitness-by-byldesign.netlify.app" target="_blank" rel="noopener" class="proj-link">
+          Voir le site
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M9 7h8v8"/>
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- PROJET 5 — Application web (à venir) -->
+    
+
+    <!-- PROJET 6 — UI/UX -->
+    
+
+  </div>
+
+  <div class="secteur-empty" hidden>
+    Aucun projet dans cette catégorie pour le moment.
+  </div>
+
+</section>
+
+<!-- ============ RETOUR VOLUMES ============ -->
+<section class="secteur-retour">
+  <a href="projets.html" data-transition class="retour-btn">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M11 18l-6-6 6-6"/>
+    </svg>
+    Retour aux volumes
+  </a>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" data-reveal="fade">
+  <p>© 2026 BylDesign — Tous droits réservés</p>
+</footer>
+
+<!-- Transition Signature -->
+<div class="transition-overlay">
+  <div class="transition-pen"></div>
+  <div class="transition-signature">BylDesign</div>
+</div>
+
+<script src="js/transition.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/secteur.js"></script>
+</body>
+</html>
