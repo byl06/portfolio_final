@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projets — BylDesign</title>
+<meta name="description" content="Découvre mes projets classés par univers : Graphisme & Design, Développement Web, Montage Vidéo.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=Alex+Brush&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/transition.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/projets.css">
+</head>
+<body class="page-projets">
+
+<!-- ============ NAV ============ -->
+<header class="nav nav-static">
+  <a href="index.html" data-transition class="nav-logo">BylDesign</a>
+  <nav class="nav-right">
+    <a href="index.html" data-transition>Accueil</a>
+    <a href="projets.html" class="is-active">Projets</a>
+    <a href="index.html#contact" data-transition>Contact</a>
+  </nav>
+</header>
+
+<!-- ============ HERO PROJETS ============ -->
+<section class="projets-hero">
+  <div class="projets-hero-label" data-reveal="up">Bibliothèque · 2026</div>
+  <h1 class="projets-hero-title" data-reveal="big-up" data-delay="1">
+    Mes <span class="accent">univers</span><br>créatifs.
+  </h1>
+  <p class="projets-hero-intro" data-reveal="up" data-delay="2">
+    Trois disciplines, trois livres. Choisis un volume pour explorer
+    les projets qui le composent — chaque page raconte une histoire.
+  </p>
+</section>
+
+<!-- ============ LES 3 LIVRES ============ -->
+<section class="bibliotheque">
+
+  <!-- LIVRE 01 — DESIGN -->
+  <a href="design.html" data-transition class="livre design" data-reveal="scale" data-delay="1" aria-label="Voir les projets Graphisme & Design">
+    <div class="livre-inner">
+      <div class="livre-pages"></div>
+      <div class="livre-spine"></div>
+      <div class="livre-cover">
+        <div class="livre-cat">Volume 01</div>
+        <div>
+          <div class="livre-title">GRAPHI<br>SME</div>
+        </div>
+        <div class="livre-sub">Logos · Flyers<br>Identité · Marque</div>
+        <div class="livre-num">01</div>
+      </div>
+    </div>
+    <div class="livre-hint">
+      <span>Ouvrir le volume</span>
+      <svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </a>
+
+  <!-- LIVRE 02 — DEV -->
+  <a href="dev.html" data-transition class="livre dev" data-reveal="scale" data-delay="2" aria-label="Voir les projets Développement web">
+    <div class="livre-inner">
+      <div class="livre-pages"></div>
+      <div class="livre-spine"></div>
+      <div class="livre-cover">
+        <div class="livre-cat">Volume 02</div>
+        <div>
+          <div class="livre-title">DÉVE<br>WEB</div>
+        </div>
+        <div class="livre-sub">Sites · Apps<br>Mobile · Front</div>
+        <div class="livre-num">02</div>
+      </div>
+    </div>
+    <div class="livre-hint">
+      <span>Ouvrir le volume</span>
+      <svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </a>
+
+  <!-- LIVRE 03 — MONTAGE -->
+  <a href="montage.html" data-transition class="livre montage" data-reveal="scale" data-delay="3" aria-label="Voir les projets Montage vidéo">
+    <div class="livre-inner">
+      <div class="livre-pages"></div>
+      <div class="livre-spine"></div>
+      <div class="livre-cover">
+        <div class="livre-cat">Volume 03</div>
+        <div>
+          <div class="livre-title">MON<br>TAGE</div>
+        </div>
+        <div class="livre-sub">Motion · Pub<br>Clips · Shorts</div>
+        <div class="livre-num">03</div>
+      </div>
+    </div>
+    <div class="livre-hint">
+      <span>Ouvrir le volume</span>
+      <svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </a>
+
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" data-reveal="fade">
+  <p>© 2026 BylDesign — Tous droits réservés</p>
+</footer>
+
+<!-- Transition Signature -->
+<div class="transition-overlay">
+  <div class="transition-pen"></div>
+  <div class="transition-signature">BylDesign</div>
+</div>
+
+<script src="js/transition.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>
