@@ -1,0 +1,279 @@
+/* =========================================================
+   PAGE PROJETS — Bibliothèque de livres 3D
+   ========================================================= */
+
+body.page-projets {
+  background: var(--white);
+}
+
+/* --- NAV STATIQUE --- */
+.nav-static {
+  position: relative;
+  padding: 26px 60px;
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+  animation: navFadeDown 0.8s cubic-bezier(.22, .9, .3, 1) forwards;
+}
+
+.nav-static .nav-right a {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color .25s ease;
+}
+
+.nav-static .nav-right a:hover { color: var(--accent); }
+
+.nav-static .nav-right a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -4px;
+  height: 1.5px;
+  background: var(--accent);
+}
+
+/* =========================================================
+   HERO PROJETS
+   ========================================================= */
+.projets-hero {
+  padding: 100px 60px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.projets-hero-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 30px;
+}
+
+.projets-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 8vw, 120px);
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+  margin-bottom: 30px;
+}
+
+.projets-hero-title .accent { color: var(--accent); }
+
+.projets-hero-intro {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 620px;
+}
+
+/* =========================================================
+   BIBLIOTHÈQUE
+   ========================================================= */
+.bibliotheque {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 80px;
+  padding: 60px 60px 160px;
+  perspective: 1600px;
+}
+
+/* ---- CARD LIVRE ---- */
+.livre {
+  position: relative;
+  display: block;
+  width: 260px;
+  height: 360px;
+  perspective: 1200px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.livre-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(-18deg);
+  transition: transform .6s cubic-bezier(.2, .9, .3, 1);
+}
+
+.livre:hover .livre-inner {
+  transform: rotateY(-28deg) translateY(-8px);
+}
+
+/* ---- COUVERTURE ---- */
+.livre-cover {
+  position: absolute;
+  inset: 0;
+  background: #111;
+  color: #fff;
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 3;
+  transform: translateZ(16px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+.livre-cover::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 6px;
+  background: var(--accent);
+}
+
+.livre-cat {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.livre-title {
+  font-family: var(--font-display);
+  font-size: 44px;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+}
+
+.livre-sub {
+  font-size: 13px;
+  color: #aaa;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+.livre-num {
+  font-family: var(--font-display);
+  font-size: 90px;
+  position: absolute;
+  bottom: -22px;
+  right: -8px;
+  color: rgba(255,255,255,0.06);
+  letter-spacing: -0.05em;
+  pointer-events: none;
+}
+
+/* ---- TRANCHE ---- */
+.livre-spine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 100%;
+  background: linear-gradient(90deg, #2a2a2a 0%, #0a0a0a 100%);
+  transform: rotateY(-90deg) translateZ(-16px);
+  transform-origin: left center;
+  z-index: 2;
+}
+
+.livre-spine::after {
+  content: "";
+  position: absolute;
+  inset: 12px 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    #ddd 0px, #ddd 1px,
+    #bbb 1px, #bbb 2px
+  );
+  opacity: 0.15;
+  border-radius: 2px;
+}
+
+/* ---- PAGES ---- */
+.livre-pages {
+  position: absolute;
+  top: 4px; left: 4px;
+  width: 100%;
+  height: calc(100% - 8px);
+  background: linear-gradient(90deg, #f5f5f3 0%, #e8e8e6 100%);
+  transform: translateZ(0);
+  z-index: 1;
+}
+
+/* ---- REFLET AU HOVER ---- */
+.livre-cover::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -60%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.08),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left .8s ease;
+}
+
+.livre:hover .livre-cover::after {
+  left: 120%;
+}
+
+/* ---- HINT "OUVRIR LE VOLUME" ---- */
+.livre-hint {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .35s ease, transform .35s ease, color .25s ease;
+}
+
+.livre:hover .livre-hint {
+  opacity: 1;
+  transform: translateY(0);
+  color: var(--accent);
+}
+
+/* ---- COULEURS PAR SECTEUR ---- */
+.livre.design .livre-cover::before { background: #fe6e00; }
+.livre.design .livre-cat { color: #fe6e00; }
+
+.livre.dev .livre-cover::before { background: #00ffa3; }
+.livre.dev .livre-cat { color: #00ffa3; }
+
+.livre.montage .livre-cover::before { background: #b16dff; }
+.livre.montage .livre-cat { color: #b16dff; }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 900px) {
+  .nav-static { padding: 20px 24px; }
+  .nav-static .nav-right { gap: 16px; }
+  .nav-static .nav-right a { font-size: 12px; }
+
+  .projets-hero { padding: 60px 24px 40px; }
+
+  .bibliotheque {
+    gap: 80px 40px;
+    padding: 40px 24px 120px;
+    flex-direction: column;
+  }
+
+  .livre { width: 220px; height: 310px; }
+  .livre-title { font-size: 38px; }
+  .livre-num { font-size: 76px; }
+  .livre-hint { opacity: 1; transform: none; }
+}
