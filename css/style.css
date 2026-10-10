@@ -1469,4 +1469,169 @@ section {
 body.menu-open {
   overflow: hidden;
 }
+/* =========================================================
+   MENU HAMBURGER + MENU MOBILE
+   ========================================================= */
 
+/* --- BOUTON HAMBURGER --- */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  /* ⚠️ CRUCIAL : position fixed + z-index au-dessus de tout */
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 9999;
+}
+
+/* Sur grand écran, on cache le hamburger */
+@media (min-width: 901px) {
+  .nav-hamburger {
+    display: none !important;
+  }
+}
+
+/* Sur mobile, on affiche le hamburger */
+@media (max-width: 900px) {
+  .nav-hamburger {
+    display: flex;
+  }
+}
+
+/* Les barres du hamburger */
+.ham-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--black);
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .25s ease, background .25s ease;
+  transform-origin: center;
+}
+
+/* --- ÉTAT OUVERT : croix blanche --- */
+.nav-hamburger.is-open .ham-bar {
+  background: var(--white);
+}
+
+.nav-hamburger.is-open .ham-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger.is-open .ham-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-hamburger.is-open .ham-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================================
+   MENU MOBILE (overlay)
+   ========================================================= */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0a;
+  z-index: 9998;   /* ⚠️ JUSTE EN DESSOUS du hamburger (9999) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 100px 40px 60px;
+  transform: translateY(-100%);
+  transition: transform .5s cubic-bezier(.22,.9,.3,1);
+  overflow-y: auto;
+  pointer-events: none;
+}
+
+.mobile-menu.is-open {
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+/* Liens du menu */
+.mobile-menu-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.mobile-menu-nav a {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 9vw, 56px);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: color .25s ease, opacity .4s ease, transform .4s cubic-bezier(.22,.9,.3,1);
+}
+
+.mobile-menu.is-open .mobile-menu-nav a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu.is-open .mobile-menu-nav a:nth-child(1) { transition-delay: .1s; }
+.mobile-menu.is-open .mobile-menu-nav a:nth-child(2) { transition-delay: .18s; }
+.mobile-menu.is-open .mobile-menu-nav a:nth-child(3) { transition-delay: .26s; }
+.mobile-menu.is-open .mobile-menu-nav a:nth-child(4) { transition-delay: .34s; }
+
+.mobile-menu-nav a:hover {
+  color: var(--accent);
+}
+
+/* Réseaux sociaux en bas du menu */
+.mobile-menu-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 40px;
+  border-top: 1px solid #1f1f1f;
+  width: 100%;
+  max-width: 400px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .4s .5s ease, transform .4s .5s ease;
+}
+
+.mobile-menu.is-open .mobile-menu-social {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu-social a {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  text-decoration: none;
+  transition: color .25s ease;
+}
+
+.mobile-menu-social a:hover {
+  color: var(--accent);
+}
+
+/* Bloque le scroll quand le menu est ouvert */
+body.menu-open {
+  overflow: hidden;
+}
