@@ -72,3 +72,54 @@ if (contactForm) {
     contactForm.reset();
   });
 }
+// =========================================================
+// MENU HAMBURGER MOBILE
+// =========================================================
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('navHamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (!hamburger || !mobileMenu) return;
+
+  // Ouvre / ferme le menu
+  function toggleMenu() {
+    const isOpen = mobileMenu.classList.toggle('is-open');
+    hamburger.classList.toggle('is-open', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('menu-open', isOpen);
+  }
+
+  // Ferme le menu
+  function closeMenu() {
+    mobileMenu.classList.remove('is-open');
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }
+
+  // Clic sur le hamburger
+  hamburger.addEventListener('click', toggleMenu);
+
+  // Clic sur un lien du menu → ferme
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      // Si le lien est externe (target _blank), ne pas fermer immédiatement
+      if (link.target === '_blank') return;
+      closeMenu();
+    });
+  });
+
+  // Touche Échap → ferme
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
+
+  // Si on redimensionne vers desktop → ferme le menu
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900 && mobileMenu.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
+});

@@ -1289,3 +1289,183 @@ section {
   }
   .contact-form { padding: 30px 24px; }
 }
+
+/* =========================================================
+   MENU HAMBURGER + MENU MOBILE
+   ========================================================= */
+
+/* Le bouton hamburger est caché par défaut (desktop) */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-hamburger .ham-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--black);
+  border-radius: 2px;
+  transition: transform .35s cubic-bezier(.22,.9,.3,1),
+              opacity .25s ease,
+              background .25s ease;
+  transform-origin: center;
+}
+
+/* Animation hamburger → X quand ouvert */
+.nav-hamburger.is-open .ham-bar {
+  background: var(--white);
+}
+.nav-hamburger.is-open .ham-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-hamburger.is-open .ham-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav-hamburger.is-open .ham-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================================
+   MENU MOBILE (overlay plein écran)
+   ========================================================= */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0a;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 100px 40px 60px;
+  transform: translateY(-100%);
+  transition: transform .5s cubic-bezier(.22,.9,.3,1);
+  overflow-y: auto;
+}
+
+.mobile-menu.is-open {
+  transform: translateY(0);
+}
+
+/* Liens du menu (grand format) */
+.mobile-menu-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.mobile-menu-nav a {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 9vw, 56px);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: color .25s ease, opacity .4s ease, transform .4s cubic-bezier(.22,.9,.3,1);
+}
+
+.mobile-menu.is-open .mobile-menu-nav a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cascade d'apparition */
+.mobile-menu.is-open .mobile-menu-nav a:nth-child(1) { transition-delay: .1s; }
+.mobile-menu.is-open .mobile-menu-nav a:nth-child(2) { transition-delay: .18s; }
+.mobile-menu.is-open .mobile-menu-nav a:nth-child(3) { transition-delay: .26s; }
+.mobile-menu.is-open .mobile-menu-nav a:nth-child(4) { transition-delay: .34s; }
+
+.mobile-menu-nav a:hover {
+  color: var(--accent);
+}
+
+/* Réseaux sociaux en bas */
+.mobile-menu-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 40px;
+  border-top: 1px solid #1f1f1f;
+  width: 100%;
+  max-width: 400px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .4s .5s ease, transform .4s .5s ease;
+}
+
+.mobile-menu.is-open .mobile-menu-social {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu-social a {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  text-decoration: none;
+  transition: color .25s ease;
+}
+
+.mobile-menu-social a:hover {
+  color: var(--accent);
+}
+
+/* =========================================================
+   RESPONSIVE — Bascule desktop → mobile à 900px
+   ========================================================= */
+@media (max-width: 900px) {
+
+  /* Cache le menu normal sur mobile */
+  .nav .nav-right {
+    display: none;
+  }
+
+  /* Affiche le hamburger */
+  .nav-hamburger {
+    display: flex;
+  }
+
+  /* Ajuste le padding du nav */
+  .nav {
+    padding: 20px 24px;
+  }
+
+  .nav-static {
+    padding: 20px 24px;
+  }
+}
+
+/* Sur desktop : cacher le menu mobile au cas où il serait ouvert */
+@media (min-width: 901px) {
+  .mobile-menu {
+    display: none;
+  }
+  .nav-hamburger {
+    display: none !important;
+  }
+}
+
+/* Bloque le scroll du body quand le menu est ouvert */
+body.menu-open {
+  overflow: hidden;
+}
